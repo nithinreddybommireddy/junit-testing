@@ -10,6 +10,7 @@ public class CustomerService {
     private List<Customer> customers;
 
     public CustomerService(List<Customer> customers) {
+
         this.customers = customers;
     }
 
@@ -22,6 +23,7 @@ public class CustomerService {
     }
 
     public List<Customer> getAllCustomers() {
+
         return customers;
     }
 
@@ -39,6 +41,7 @@ public class CustomerService {
     }
 
     public double getTotalBalance() {
+
         return customers.stream().mapToDouble(Customer::getBalance).sum();
     }
 }
